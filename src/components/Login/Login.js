@@ -29,7 +29,7 @@ function Login(props) {
 
   async function handleSubmit(e) {
     e.preventDefault()
-
+    console.log(username, password)
     // set the csrf and bearer tokens in sessionStorage
     await userLogin({
       username,
@@ -41,18 +41,18 @@ function Login(props) {
   }
 
   return (
-    <div className="login-wrapper">
+    <div className="login-form">
       <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUsername(e.target.value)} />
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
-        </label>
-        <div>
-          <button type="submit">Submit</button>
+        <div className="login-form__logo-container">
+          <img src="https://todo-app-resource-files.s3.us-east-2.amazonaws.com/pngegg.png" alt="login logo"></img>
+        </div>
+        <div className="login-form__content">
+          <div className="login-form__header">
+            Login to your account
+          </div>
+          <input className="login-form__input" onChange={(e) => setUsername(e.target.value)} type="text" name="username" placeholder="Username"></input>
+          <input className="login-form__input" onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Password"></input>
+          <button className="login-form__button" type="submit">Login</button>
         </div>
       </form>
     </div>
