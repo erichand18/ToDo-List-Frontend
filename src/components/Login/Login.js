@@ -15,8 +15,10 @@ async function userLogin(login_credentials) {
     login_credentials,
     config,
   )
+  sessionStorage.setItem('csrf_token', data.data.csrf_token);
+  sessionStorage.setItem('bearer_token', data.data.bearer_token);
 
-  return data.data.token;
+  return
 }
 
 function Login(props) {
@@ -27,15 +29,15 @@ function Login(props) {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    const token = await userLogin({
+
+    // set the csrf and bearer tokens in sessionStorage
+    await userLogin({
       username,
       password,
     })
+    const bearer_token = sessionStorage.getItem('bearer_token');
 
-    console.log("this ran I guess?")
-    sessionStorage.setItem('username', username);
-
-    setToken(token)
+    setToken(bearer_token)
   }
 
   return (
