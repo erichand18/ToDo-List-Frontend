@@ -4,13 +4,13 @@ body {
   margin-top: 150px;
 }
 
-.login-form,
-.login-form * {
+.login-signup-form,
+.login-signup-form * {
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-.login-form {
+.login-signup-form {
   max-width: 350px;
   margin: 0 auto;
   border-radius: 5px;
@@ -21,29 +21,29 @@ body {
   background: white;
 }
 
-.login-form__logo-container {
+.login-signup-form__logo-container {
   padding: 30px;
   background: rgba(0,0,0,0.25);
 }
 
-.login-form__logo-container img {
+.login-signup-form__logo-container img {
   display: block;
   max-width: 125px;
   margin: 0 auto;
 }
 
-.login-form__content {
+.login-signup-form__content {
   padding: 30px;
   background: #eeeeee;
 }
 
-.login-form__header {
+.login-signup-form__header {
   margin-bottom: 15px;
   text-align: center;
   color: #333333;
 }
 
-.login-form__input {
+.login-signup-form__input {
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
@@ -54,15 +54,15 @@ body {
   transition: border-color 0.5s;
 }
 
-.login-form__input:focus {
+.login-signup-form__input:focus {
   border-color: #282c34;
 }
 
-.login-form__input:placeholder {
+.login-signup-form__input:placeholder {
   color: #aaaaaa;
 }
 
-.login-form__button {
+.login-signup-form__button {
   padding: 10px;
   color: #ffffff;
   font-weight: bold;
@@ -74,6 +74,12 @@ body {
   cursor: pointer;
 }
 
-.login-form__button:active {
+.login-signup-form__button:active {
   background: #282c67;
+}
+
+.login-signup-form__signup {
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
 }
