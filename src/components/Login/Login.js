@@ -28,7 +28,7 @@ async function userSignup(signup_info) {
     }
   }
 
-  const data = await axios.post(
+  await axios.post(
     'http://localhost:8000/user/signup',
     signup_info,
     config,
