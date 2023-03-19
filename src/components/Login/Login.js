@@ -33,9 +33,7 @@ async function userSignup(signup_info) {
     signup_info,
     config,
   );
-
-  console.log(data);
-}
+};
 
 function Login(props) {
   const { setToken } = props
@@ -72,12 +70,14 @@ function Login(props) {
     e.preventDefault();
 
     await userSignup({
-      firstName,
-      lastName,
+      first_name: firstName,
+      last_name: lastName,
       email,
       username,
       password,
     })
+
+    setNewUser(false);
   }
 
   if (!newUser) {

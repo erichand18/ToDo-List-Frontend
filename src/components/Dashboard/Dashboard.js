@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TaskList from '../TaskList/TaskList';
+import TaskCreate from '../TaskCreate/TaskCreate';
 
 import './Dashboard.css';
 
@@ -30,6 +31,7 @@ async function getList(token) {
 
 function Dashboard(props) {
   const [list, setList] = useState([])
+  const [taskCreate, setTaskCreate] = useState(false);
 
   useEffect(() => {
     const fetchList = async () => {
@@ -45,13 +47,26 @@ function Dashboard(props) {
     fetchList();
   }, [props.token])
 
-  function handleClick(e) {
+  function handleLogOut(e) {
     e.preventDefault();
 
     sessionStorage.removeItem('bearer_token');
     sessionStorage.removeItem('csrf_token');
 
     props.setToken(null);
+  };
+
+  function handleTaskCreate(e) {
+    e.preventDefault();
+
+    setTaskCreate(true);
+  }
+
+
+  if (taskCreate) {
+    return (
+      <TaskCreate setTaskCreate={setTaskCreate} />
+    );
   }
 
   return (
@@ -59,10 +74,10 @@ function Dashboard(props) {
       <div className="header">
         <h1>Welcome to ToDo List!</h1>
         <div className="taskbar">
-          <button className="taskbar-button" onClick={handleClick}>
+          <button className="taskbar-button" onClick={handleLogOut}>
             Log out
           </button>
-          <button className="taskbar-button">
+          <button className="taskbar-button" onClick={handleTaskCreate}>
             +
           </button>
         </div>
