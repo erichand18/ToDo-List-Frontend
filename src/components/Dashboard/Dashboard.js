@@ -6,11 +6,13 @@ import TaskCreate from '../TaskCreate/TaskCreate';
 import './Dashboard.css';
 
 //Fetches list from the backend
-async function getList(token) {
+async function getList() {
+  const bearer_token = sessionStorage.getItem('bearer_token');
+
   const config = {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': token,
+      'Authorization': bearer_token,
     },
   }
 
@@ -26,11 +28,14 @@ function Dashboard(props) {
   const [list, setList] = useState([])
   const [taskCreate, setTaskCreate] = useState(false);
 
+
+
   useEffect(() => {
     const fetchList = async () => {
+      const bearer_token = sessionStorage.getItem('bearer_token');
       try {
         setList([]);
-        const list_data = await getList(props.token);
+        const list_data = await getList(bearer_token);
         setList(list_data.data.tasks);
       } catch (e) {
         console.log(e)
@@ -38,7 +43,7 @@ function Dashboard(props) {
       }
     };
     fetchList();
-  }, [props.token])
+  }, [taskCreate])
 
   function handleLogOut(e) {
     e.preventDefault();

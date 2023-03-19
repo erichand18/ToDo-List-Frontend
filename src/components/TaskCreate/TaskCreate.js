@@ -28,7 +28,6 @@ function TaskCreate(props) {
   const [taskName, setTaskName] = useState();
   const [taskDescription, setTaskDescription] = useState();
 
-
   async function handleNewTaskSubmit(e) {
     e.preventDefault();
 
