@@ -6,10 +6,10 @@ body {
 
 .dashboard-wrapper {
   max-width: 900px;
-  max-height: 500px;
+  max-height: 1000px;
   margin: 0 auto;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
   background: white;
 }

@@ -10,19 +10,12 @@ async function getList(token) {
   const config = {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': token,
     },
-    useCredentials: false,
-  }
-  const username = sessionStorage.getItem('username')
-
-  const data = {
-    csrfmiddlewaretoken: token,
-    username: username,
   }
 
-  const list_data = await axios.post(
+  const list_data = await axios.get(
     'http://localhost:8000/task/list',
-    data,
     config
   );
 
