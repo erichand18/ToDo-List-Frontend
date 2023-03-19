@@ -67,6 +67,7 @@ body {
 }
 
 .new-task-form__button {
+  margin: 3px;
   padding: 10px;
   color: #ffffff;
   font-weight: bold;

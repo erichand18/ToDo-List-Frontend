@@ -40,6 +40,12 @@ function TaskCreate(props) {
     props.setTaskCreate(false);
   }
 
+  function handleCancelButton(e) {
+    e.preventDefault();
+
+    props.setTaskCreate(false);
+  }
+
   return (
     <div className="new-task-form">
       <form onSubmit={handleNewTaskSubmit}>
@@ -52,6 +58,7 @@ function TaskCreate(props) {
           <label className="new-task-form__label" for="task_description">Description:</label>
           <textarea className="new-task-form__input" onChange={(e) => setTaskDescription(e.target.value)} rows="4" cols="50" name="task_description" placeholder="Lorem Ipsum something something something"></textarea>
           <button className="new-task-form__button" type="submit">Create Task</button>
+          <button className="new-task-form__button" onClick={handleCancelButton}>Cancel</button>
         </div>
       </form>
     </div>
