@@ -70,20 +70,22 @@ function Dashboard(props) {
   }
 
   return (
-    <div className="wrapper">
-      <div className="header">
-        <h1>Welcome to ToDo List!</h1>
-        <div className="taskbar">
-          <button className="taskbar-button" onClick={handleLogOut}>
-            Log out
-          </button>
-          <button className="taskbar-button" onClick={handleTaskCreate}>
-            +
-          </button>
+    <div className="dashboard-wrapper">
+      <div className="dashboard__content">
+        <div className="dashboard-header">
+          <h1 className="dashboard-header__text">My To-Do List</h1>
+          <div className="dashboard-taskbar">
+            <button className="dashboard-taskbar__button" onClick={handleLogOut}>
+              Log out
+            </button>
+            <button className="dashboard-taskbar__button" onClick={handleTaskCreate}>
+              +
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="body">
-        <TaskList task_list={list} />
+        <div className="dashboard-body">
+          <TaskList task_list={list} />
+        </div>
       </div>
     </div>
   )
