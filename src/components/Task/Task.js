@@ -7,23 +7,16 @@ import './Task.css';
 function Task(props) {
   return (
     <div className="task">
-
-      <div className="checkbox">
+      <div className="task__checkbox">
         <input type="checkbox" checked={props.data.complete}></input>
       </div>
-
-      <div className="task-details">
-
-        <div className="titlebar">
-          <h3>{props.data.task_name}</h3>
-          <p>{props.data.date_created}</p>
+      <div className="task__details">
+        <div className="task__titlebar">
+          {props.data.task_name}
         </div>
-
-        <div className="task-body">
-          <p>{props.data.task_description}</p>
-
+        <div className="task__content">
+          {props.data.task_description}
         </div>
-
       </div>
     </div>
   )

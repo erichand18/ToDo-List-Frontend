@@ -15,7 +15,6 @@ async function userLogin(login_credentials) {
     login_credentials,
     config,
   )
-  sessionStorage.setItem('csrf_token', data.data.csrf_token);
   sessionStorage.setItem('bearer_token', data.data.bearer_token);
 
   return
@@ -56,7 +55,7 @@ function Login(props) {
   async function handleLoginSubmit(e) {
     e.preventDefault();
 
-    // set the csrf and bearer tokens in sessionStorage
+    // set the bearer token in sessionStorage
     await userLogin({
       username,
       password,

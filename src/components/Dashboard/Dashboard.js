@@ -44,7 +44,6 @@ function Dashboard(props) {
     e.preventDefault();
 
     sessionStorage.removeItem('bearer_token');
-    sessionStorage.removeItem('csrf_token');
 
     props.setToken(null);
   };
@@ -76,7 +75,7 @@ function Dashboard(props) {
             </button>
           </div>
         </div>
-        <div className="dashboard-body">
+        <div className="dashboard__body">
           <TaskList task_list={list} />
         </div>
       </div>
