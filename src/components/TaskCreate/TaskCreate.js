@@ -36,13 +36,13 @@ function TaskCreate(props) {
       description: taskDescription,
     });
 
-    props.setTaskCreate(false);
+    props.setMode(false);
   }
 
   function handleCancelButton(e) {
     e.preventDefault();
 
-    props.setTaskCreate(false);
+    props.setMode(false);
   }
 
   return (
