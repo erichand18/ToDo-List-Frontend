@@ -52,7 +52,6 @@ function Task(props) {
   async function handleTaskCheck(e) {
     e.preventDefault();
     const updated_completed = await toggleTaskComplete(props.data.id);
-    console.log(updated_completed);
     setCompleted(updated_completed);
   }
 
