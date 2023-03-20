@@ -57,6 +57,6 @@
   display: block;
 }
 
-.task-dropdown__option:active {
+.task-dropdown__option:hover {
   cursor: pointer;
 }

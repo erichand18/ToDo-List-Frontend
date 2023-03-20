@@ -64,7 +64,7 @@ function Task(props) {
   async function handleTaskDelete(e) {
     e.preventDefault();
     await deleteTask(props.data.id);
-    props.setMode(null);
+    props.setMode('delete');
   }
 
   function handleTaskShare(e) {

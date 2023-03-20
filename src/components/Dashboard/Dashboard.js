@@ -40,12 +40,11 @@ function Dashboard(props) {
     const bearer_token = sessionStorage.getItem('bearer_token');
     const fetchList = async () => {
       try {
-        setList([]);
         const list_data = await getList(bearer_token);
         setList(list_data.tasks);
         setSharedList(list_data.shared_tasks);
       } catch (e) {
-        console.log(e)
+        console.log(e);
         setList([]);
       }
     };
@@ -102,7 +101,7 @@ function Dashboard(props) {
               Log out
             </button>
             <button className="dashboard-taskbar__button" onClick={handleTaskCreate}>
-              +
+              New Task
             </button>
           </div>
         </div>
