@@ -4,49 +4,47 @@ body {
   margin-top: 150px;
 }
 
-.login-signup-form,
-.login-signup-form * {
+.update-share-task-form,
+.update-share-task-form * {
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-.login-signup-form {
-  max-width: 350px;
+.update-share-task-form {
+  max-width: 700px;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);
-  
-  padding: 15px;
-  background: white;
 }
 
-.login-signup-form__logo-container {
+.update-share-task-form__logo-container {
   padding: 30px;
   background: rgba(0,0,0,0.25);
 }
 
-.login-signup-form__logo-container img {
+.update-share-task-form__logo-container img {
   display: block;
   max-width: 125px;
   margin: 0 auto;
 }
 
-.login-signup-form__content {
+.update-share-task-form__content {
   padding: 30px;
   background: #eeeeee;
 }
 
-.login-signup-form__header {
+.update-share-task-form__header {
   margin-bottom: 15px;
   text-align: center;
   color: #333333;
+  font-size: 36px;
 }
 
-.login-signup-form__input {
+.update-share-task-form__input {
   width: 100%;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: 2px solid #dddddd;
   background: #ffffff;
@@ -54,15 +52,22 @@ body {
   transition: border-color 0.5s;
 }
 
-.login-signup-form__input:focus {
+.update-share-task-form__input:focus {
   border-color: #282c34;
 }
 
-.login-signup-form__input:placeholder {
+.update-share-task-form__input:placeholder {
   color: #aaaaaa;
 }
 
-.login-signup-form__button {
+.update-share-task-form__label {
+  text-align: left;
+  font-family: sans serif;
+  font-size: 18px;
+}
+
+.update-share-task-form__button {
+  margin: 3px;
   padding: 10px;
   color: #ffffff;
   font-weight: bold;
@@ -74,12 +79,6 @@ body {
   cursor: pointer;
 }
 
-.login-signup-form__button:active {
+.update-share-task-form__button:active {
   background: #282c67;
-}
-
-.login-signup-form__signup {
-  cursor: pointer;
-  text-align: center;
-  padding-top: 10px;
 }

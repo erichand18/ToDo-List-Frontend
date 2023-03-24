@@ -1,0 +1,55 @@
+body {
+  background-color: #282c34;
+  margin: 15px;
+  margin-top: 20px;
+}
+
+.dashboard-wrapper {
+  max-width: 900px;
+  max-height: 1000px;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: scroll;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  background: white;
+}
+
+.dashboard__body {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.dashboard__content {
+  padding: 30px;
+  background: #eeeeee;
+  margin: 0 auto;
+}
+
+.dashboard__header {
+  margin: 0 auto;
+}
+
+.dashboard-header__text {
+  text-align: center;
+  color: #282c34;
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+.dashboard-taskbar {
+  text-align: center;
+}
+
+.dashboard-taskbar__button {
+  padding: 10px;
+  margin: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #282c34;
+  width: 20%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
